@@ -24,7 +24,10 @@ $(document).ready(function(){
 		})
 		.then(response => response.json())
 		.then(data => console.log(data))
-		.then(error => console.error('Error:', error));		
+		.catch(error => console.error('Error:', error));	
+		
+		alert("등록됨");
+	
 	})
 	$("#codeGroupDeleteId").click(function(){
 	console.log("codeGroupDelete")		
