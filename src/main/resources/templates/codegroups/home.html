@@ -10,14 +10,18 @@
 	<table>
 		<tr>
 			<td><label for="groupCodeId"></label></td>
-			<td><input type="text" id="groupCodeId" name="groupCode"
-				placeholder="Group Code">
+			<td>
+			<input type="text" id="groupCodeId" name="groupCode"
+				placeholder="Group Code" class="form-control">
+				<small id="groupCodeError" class="error-message"></small>
 			</td>
 		</tr>
 		<tr>
 			<td><label for="groupNameId"></label></td>
-			<td><input type="text" id="groupNameId" name="groupName"
-				placeholder="Group Name">
+			<td>
+			<input type="text" id="groupNameId" name="groupName"
+				placeholder="Group Name"class="form-control">
+				<small id="groupNameError" class="error-message"></small>
 			</td>
 		</tr>
 	</table>
@@ -31,6 +35,7 @@
 	</div>
 	
 	<script th:src="@{/js/libs/jquery-3.7.1.min.js}"></script>
+	<script th:src="@{/js/app/common.js}"></script>
 	<script th:src="@{/js/app/code-group.js}"></script>
 </body>
 </html>
