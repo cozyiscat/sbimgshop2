@@ -26,15 +26,31 @@
 		</tr>
 	</table>
 	<div>
-		<button th:text="#{common.post.list}" id="codeGroupListId">List</button>
-		<button th:text="#{common.post.read}" id="codeGroupreadId">Read</button>
-		<button th:text="#{common.post.register}" id="codeGroupRegisterId">Register</button>
-		<button th:text="#{common.post.delete}" id="codeGroupDeleteId">Delete</button>
-		<button th:text="#{common.post.modify}" id="codeGroupModifyId">Modify</button>
-		<button th:text="#{common.post.reset}" id="codeGroupResetId">Reset</button>
+		<button th:text="#{botton.list}" id="codeGroupListId">List</button>
+		<button th:text="#{botton.read}" id="codeGroupreadId">Read</button>
+		<button th:text="#{botton.register}" id="codeGroupRegisterId">Register</button>
+		<button th:text="#{botton.delete}" id="codeGroupDeleteId">Delete</button>
+		<button th:text="#{botton.modify}" id="codeGroupModifyId">Modify</button>
+		<button th:text="#{botton.reset}" id="codeGroupResetId">Reset</button>
 	</div>
 	
 	<script th:src="@{/js/libs/jquery-3.7.1.min.js}"></script>
+	<!-- 메시지를 JavaScript 변수로 선언 -->	
+	<script th:inline="javascript">
+   	 const messages = {
+    	    required: {
+        	    groupCode: [[#{valid.required.groupCode}]],
+            	groupName: [[#{valid.required.groupName}]]
+        	},
+        	size: {
+            	groupCode: [[#{valid.size.groupCode}]],
+            	groupName: [[#{valid.size.groupName}]]
+    	    },
+   	     process: {
+   	         fail: [[#{process.fail}]]
+   	     }
+  	  };
+	</script>
 	<script th:src="@{/js/app/common.js}"></script>
 	<script th:src="@{/js/app/code-group.js}"></script>
 </body>
